@@ -5,10 +5,35 @@ dependencies:
   - fenics
   - matplotlib
   - mshr
-packages:
-  dolfin:
-    sources:
-      - key: git:50f3a35d3ba3d6822a4e2201b5a1d0dee88e1f52
-        url: https://bitbucket.org/fenics-project/dolfin.git
-    build_with: |
-      openblas, hdf5, parmetis, petsc, petsc4py, suitesparse, scotch, slepc, slepc4py, zlib
+package:
+  name: mshr
+  version: {{version}}
+
+source:
+  url: https://bitbucket.org/fenics-project/mshr/downloads/mshr-{{version}}.tar.gz
+  sha1: 39632f61468718332bb5d6713f05a0c97703acc0
+  patches:
+    - python3.patch  # [py3k]
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - cmake
+    - fenics
+    - gmp
+    - mpfr
+
+  run:
+    - python
+    - cmake
+    - fenics
+    - gmp
+    - mpfr
+
+test:
+  imports:
+    - mshr
+
