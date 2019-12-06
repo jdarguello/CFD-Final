@@ -5,4 +5,4 @@ dependencies:
   - fenics
   - matplotlib
   - mshr
-  - dolfin
+  - dolphin
