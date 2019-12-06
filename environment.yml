@@ -5,4 +5,10 @@ dependencies:
   - fenics
   - matplotlib
   - mshr
-  - dolphin
+packages:
+  dolfin:
+    sources:
+      - key: git:50f3a35d3ba3d6822a4e2201b5a1d0dee88e1f52
+        url: https://bitbucket.org/fenics-project/dolfin.git
+    build_with: |
+      openblas, hdf5, parmetis, petsc, petsc4py, suitesparse, scotch, slepc, slepc4py, zlib
