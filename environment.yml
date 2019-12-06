@@ -5,35 +5,6 @@ dependencies:
   - fenics
   - matplotlib
   - mshr
-package:
-  name: mshr
-  version: {{version}}
+  - pybind11
 
-source:
-  url: https://bitbucket.org/fenics-project/mshr/downloads/mshr-{{version}}.tar.gz
-  sha1: 39632f61468718332bb5d6713f05a0c97703acc0
-  patches:
-    - python3.patch  # [py3k]
-
-build:
-  number: 0
-
-requirements:
-  build:
-    - python
-    - cmake
-    - fenics
-    - gmp
-    - mpfr
-
-  run:
-    - python
-    - cmake
-    - fenics
-    - gmp
-    - mpfr
-
-test:
-  imports:
-    - mshr
 
