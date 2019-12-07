@@ -1,0 +1,4 @@
+software-properties-common
+repository ppa:fenics-packages/fenics
+update
+--no-install-recommends fenics
